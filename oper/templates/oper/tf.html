@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TF검색</title>
+</head>
+<body>
+    <form action="/tf" method="post">
+        {% csrf_token %}
+        <textarea name="content"></textarea><br>
+        <input type="text" name="search"><br>
+        <input type="submit" value="검색">
+    </form>
+</body>
+</html>

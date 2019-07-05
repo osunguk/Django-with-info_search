@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>DF 검색</title>
+</head>
+<body>
+    <form action="/df" method="post">
+        {% csrf_token %}
+        <textarea name="doc1"></textarea><br>
+        <textarea name="doc2"></textarea><br>
+        <textarea name="doc3"></textarea><br>
+        <textarea name="doc4"></textarea><br>
+        <input type="text" name="search"><br>
+        <input type="submit" value="검색">
+    </form>
+</body>
+</html>
