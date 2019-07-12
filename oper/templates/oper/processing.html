@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Processing</title>
+</head>
+<body>
+<h2>{{process}}</h2>
+
+    {% if doc1 %} <!-- doc1 으로 넘어오는 자료가 있을 때 실행 -->
+        <p>D1 : {{doc1}}</p>
+        <p>D2 : {{doc2}}</p>
+        <p>D3 : {{doc3}}</p>
+    {% endif %}
+
+    {% if token_doc1 %} <!-- token_doc1 으로 넘어오는 자료가 있을 때 실행 -->
+        <p>D1</p>
+        {% for x in token_doc1 %}
+        <span>'{{x}}'</span>
+        {% endfor %}
+        <p>D2</p>
+        {% for x in token_doc2 %}
+        <span>'{{x}}'</span>
+        {% endfor %}
+        <p>D3</p>
+        {% for x in token_doc3 %}
+        <span>'{{x}}'</span>
+        {% endfor %}
+    {% endif %}
+
+    {% if index %} <!-- index 으로 넘어오는 자료가 있을 때 실행 -->
+        <p>Indexing</p>
+        {% for x in index %}
+            <span>{{x}},</span>
+        {% endfor %}
+    {% endif %}
+
+<h2>데이터 처리 목록</h2>
+<a href="{% url 'token' %}">토큰 추출</a><br><br>
+<a href="{% url 'normalization' %}">정규화</a><br><br>
+<a href="{% url 'stop_word' %}">불용어 제거</a><br><br>
+<a href="{% url 'mkdic' %}">사전 작업</a>
+
+<h2>검색어 입력</h2>
+<form action="/indexing" method="get">
+        <p><input type="text" name="search"></p>
+        <p><input type="submit" value="검색"></p>
+    </form>
+</body>
+</html>

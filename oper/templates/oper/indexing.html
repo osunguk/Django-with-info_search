@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>인덱싱</title>
+</head>
+<body>
+    <h1>검색어 : {{query}}</h1>
+
+    <h3>문서 유사도</h3>
+    {% if similarity %} <!-- S\similarity 으로 넘어오는 자료가 있을 때 실행 -->
+        <p>Document Similarity</p>
+        {% for x in similarity %}
+            <p>{{x}}</p>
+        {% endfor %}
+    {% endif %}
+
+    <a href="{% url 'mkdic' %}">재 검색</a><br><br>
+</body>
+</html>

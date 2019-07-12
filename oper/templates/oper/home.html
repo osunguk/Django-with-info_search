@@ -5,8 +5,13 @@
     <title>Home</title>
 </head>
 <body>
-    <a herf="{% url tf %}">tf검색</a>
-    <a>df검색</a>
-    <a>idf검색</a>
+    <h2>데이터를 입력해 주세요</h2>
+    <form action="/processing" method="post">
+        {% csrf_token %}
+        <p>doc1</p><textarea name="doc1", rows="5", cols="50">Hwang right three doctors truth are same the enormous thing. our country I with a same Korean feel a self-conceit. When Hwang right three doctors the same minute is on-e minute than and pain in of incurable disease it means that also the people whom it receives will decrease plentifully.</textarea><br>
+        <p>doc2</p><textarea name="doc2", rows="5", cols="50">Bill Gates invents a window and all people are using a window until now. And from the world first place 1 with the person who floated. And he will burn and the ms he operates well, it is because is a big enterpriser.</textarea><br>
+        <p>doc3</p><textarea name="doc3", rows="5", cols="50">The now Republic of Korea which when does not have the pure extension army has taken away in Japan and it does not know. The pure extension army the country hazard it fought eagerly and it sacrificed from warfare. When the pure extension army same minute it is on-e minute than and the warfare gets in the next our country but it fights eagerly, It appears defending the country.</textarea><br>
+        <input type="submit" value="검색">
+    </form>
 </body>
 </html>
