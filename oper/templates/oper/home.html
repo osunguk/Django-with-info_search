@@ -5,12 +5,30 @@
     <title>Home</title>
 </head>
 <body>
-    <h2>데이터를 입력해 주세요</h2>
+    <h2>영어문서 처리</h2>
     <form action="/processing" method="post">
         {% csrf_token %}
         <p>doc1</p><textarea name="doc1", rows="5", cols="50">Hwang right three doctors truth are same the enormous thing. our country I with a same Korean feel a self-conceit. When Hwang right three doctors the same minute is on-e minute than and pain in of incurable disease it means that also the people whom it receives will decrease plentifully.</textarea><br>
         <p>doc2</p><textarea name="doc2", rows="5", cols="50">Bill Gates invents a window and all people are using a window until now. And from the world first place 1 with the person who floated. And he will burn and the ms he operates well, it is because is a big enterpriser.</textarea><br>
         <p>doc3</p><textarea name="doc3", rows="5", cols="50">The now Republic of Korea which when does not have the pure extension army has taken away in Japan and it does not know. The pure extension army the country hazard it fought eagerly and it sacrificed from warfare. When the pure extension army same minute it is on-e minute than and the warfare gets in the next our country but it fights eagerly, It appears defending the country.</textarea><br>
+        <input type="submit" value="검색">
+    </form>
+
+    <h2>한글 문서 처리</h2>
+    <form action="/processing" method="post">
+        {% csrf_token %}
+        <p>doc1</p><textarea name="doc1", rows="5", cols="50">오늘 인질극은, 2교시 수업 중이던 오전 10시 20분쯤 3학년 5반 교실에 지 씨가 흉기를 갖고 들어오자 학생들이 뒷문으로 탈출했고 여고생 4명과 교사가 탈출에 실패해 범인과 6시간여 동안 교실에 남아 있었습니다.</textarea><br>
+        <p>doc2</p><textarea name="doc2", rows="5", cols="50">한나라당은 오늘, 안기부 선거 자금 지원 사건과 관련해서 민주당과 김중권 대표, 김영환 대변인을 상대로 한나라당과 이회창 총재의 명예를 훼손했다면서 천억 원의 손해 배상 청구 소송을 서울 지방 민사 법원에 제출하기로 했습니다.</textarea><br>
+        <p>doc3</p><textarea name="doc3", rows="5", cols="50">소크라테스는 민주주의를 반대하고, 우리가 숭배하는 신들을 믿지 않고, 청년들을 타락시켰다는 엉뚱한 죄목으로 고발하였습니다.</textarea><br>
+        <input type="submit" value="검색">
+    </form>
+
+    <h2>영어 한글 혼용 문서 처리</h2>
+    <form action="/processing" method="post">
+        {% csrf_token %}
+        <p>doc1</p><textarea name="doc1", rows="5", cols="50">가슴이 용감하고 그러므로 영원히 것이다. 하여도 얼마나 피는 일월과 커다란 봄바람이다. 피고, 새 때에, 그들은 그것은 오직 끓는 무엇이 청춘은 약동하다. 못할 못하다 날카로우나 실로 크고 바이며, 설레는 같은 그들은 보라. 미인을 만물은 이것을 속잎나고, 용기가 열락의 사막이다. 만천하의 오아이스도 이상 무엇이 부패뿐이다.</textarea><br>
+        <p>doc3</p><textarea name="doc2", rows="5", cols="50">The now Republic of Korea which when does not have the pure extension army has taken away in Japan and it does not know. The pure extension army the country hazard it fought eagerly and it sacrificed from warfare. When the pure extension army same minute it is on-e minute than and the warfare gets in the next our country but it fights eagerly, It appears defending the country.</textarea><br>
+        <p>doc3</p><textarea name="doc3", rows="5", cols="50">소크라테스는 민주주의를 반대하고, 우리가 숭배하는 신들을 믿지 않고,Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean varius eget nunc ac facilisis. Sed et eros aliquam quam mollis imperdiet a eget est. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed aliquet efficitur diam vitae vehicula.Integer commodo tellus arcu, at elementum velit sagittis in. 죄목으로 고발하였습니다.</textarea><br>
         <input type="submit" value="검색">
     </form>
 </body>
